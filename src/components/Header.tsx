@@ -1,5 +1,10 @@
-import { useState } from "react";
-import List from "./List";
+interface headerProps {
+  todos: { text: string; id: number; completed: boolean }[];
+  setTodos: any;
+  setFilter: (newItem: string) => void;
+  newListItem: string;
+  setNewListItem: (newItem: string) => void;
+}
 
 export default function Header({
   todos,
@@ -7,12 +12,12 @@ export default function Header({
   setFilter,
   newListItem,
   setNewListItem,
-}) {
-  const inputTextHandler = (e) => {
-    setNewListItem(e.target.value);
+}: headerProps) {
+  const inputTextHandler = (e:React.ChangeEvent<HTMLInputElement>) => {
+    setNewListItem(e.target.value as string);
   };
 
-  const handleItemAdd = (e) => {
+  const handleItemAdd = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (newListItem != "") {
       setTodos([
@@ -27,7 +32,7 @@ export default function Header({
     setNewListItem("");
   };
 
-  const handleFilterChange = (e) => {
+  const handleFilterChange = (e:React.ChangeEvent<HTMLSelectElement>) => {
     setFilter(e.target.value);
   };
 

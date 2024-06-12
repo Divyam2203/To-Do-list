@@ -1,11 +1,22 @@
-export default function Item({ text, todo, todos, setTodos }) {
+interface itemProps {
+  text: string;
+  todo: { text: string; id: number; completed: boolean }; 
+  todos: { text: string; id: number; completed: boolean  }[]; 
+  setTodos: (func: { text: string; id: number; completed: boolean; }[]) => void; 
+}
+
+export default function Item({ text, todo, todos, setTodos }: itemProps) {
   const deleteHandler = () => {
-    setTodos(todos.filter((item) => item.id !== todo.id));
+    setTodos(
+      todos.filter(
+        (item: { id: number; completed: boolean }) => item.id !== todo.id,
+      ),
+    );
   };
 
   const completeHandler = () => {
     setTodos(
-      todos.map((item) => {
+      todos.map((item: { text: string; id: number; completed: boolean  }) => {
         if (item.id == todo.id) {
           return {
             ...item,
@@ -33,9 +44,12 @@ export default function Item({ text, todo, todos, setTodos }) {
       </div>
     );
     completeButton = (
-      <button className="m-1 h-full w-12 bg-yellow-500" onClick={completeHandler}>
-      undone
-    </button>
+      <button
+        className="m-1 h-full w-12 bg-yellow-500"
+        onClick={completeHandler}
+      >
+        undone
+      </button>
     );
   }
 

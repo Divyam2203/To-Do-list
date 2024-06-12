@@ -9,7 +9,6 @@ export default function App() {
   const [newListItem, setNewListItem] = useState("");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
-
   useEffect(() => {
     getLocalTodos();
   }, []);
@@ -17,17 +16,25 @@ export default function App() {
   useEffect(() => {
     filterHandler();
     saveLocalTodos();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [todos, filter]);
 
   const filterHandler = () => {
     switch (filter) {
       case "completed":
-        setFilteredTodos(todos.filter((todo) => todo.completed === true));
+        setFilteredTodos(
+          todos.filter(
+            (todo: { completed: boolean }) => todo?.completed === true,
+          ),
+        );
         break;
 
       case "incomplete":
-        setFilteredTodos(todos.filter((todo) => todo.completed === false));
+        setFilteredTodos(
+          todos.filter(
+            (todo: { completed: boolean }) => todo?.completed === false,
+          ),
+        );
         break;
 
       default:
@@ -45,14 +52,20 @@ export default function App() {
     if (localStorage.getItem("todos") === null) {
       localStorage.setItem("todos", JSON.stringify([]));
     } else {
-      let localTodos = JSON.parse(localStorage.getItem("todos"));
+      let localTodos = JSON.parse(localStorage.getItem("todos") ?? "");
       setTodos(localTodos);
     }
   };
 
   return (
     <div className="m-auto mt-20 w-3/5 min-w-96 border-2 border-black">
-      <Header todos={todos} setTodos={setTodos} setFilter={setFilter} newListItem={newListItem} setNewListItem={setNewListItem} />
+      <Header
+        todos={todos}
+        setTodos={setTodos}
+        setFilter={setFilter}
+        newListItem={newListItem}
+        setNewListItem={setNewListItem}
+      />
       <List todos={todos} setTodos={setTodos} filteredTodos={filteredTodos} />
     </div>
   );
