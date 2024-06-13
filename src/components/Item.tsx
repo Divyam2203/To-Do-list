@@ -29,23 +29,23 @@ export default function Item({ text, todo, todos, setTodos }: itemProps) {
   };
 
   let itemContent = (
-    <div className="align-center m-1 h-full w-full bg-gray-50 p-3">{text}</div>
+    <div className="align-center m-1 h-full w-full bg-gray-50 p-3 rounded-sm">{text}</div>
   );
   let completeButton = (
-    <button className="m-1 h-full w-12 bg-green-500" onClick={completeHandler}>
+    <button className="m-1 h-full w-12 bg-green-500 rounded-sm" onClick={completeHandler}>
       done
     </button>
   );
 
   if (todo.completed) {
     itemContent = (
-      <div className="align-center m-1 h-full w-full bg-gray-400 p-3">
+      <div className="align-center m-1 h-full w-full bg-gray-400 p-3 rounded-sm">
         {text}
       </div>
     );
     completeButton = (
       <button
-        className="m-1 h-full w-12 bg-yellow-500"
+        className="m-1 h-full w-12 bg-yellow-500 rounded-sm"
         onClick={completeHandler}
       >
         undone
@@ -58,7 +58,7 @@ export default function Item({ text, todo, todos, setTodos }: itemProps) {
       {itemContent}
       <div>{completeButton}</div>
       <div>
-        <button className="m-1 h-full w-12 bg-red-500" onClick={deleteHandler}>
+        <button className="m-1 h-full w-12 bg-red-500 rounded-sm" onClick={deleteHandler}>
           del
         </button>
       </div>

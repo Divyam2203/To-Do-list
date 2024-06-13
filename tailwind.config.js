@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        bgimg:  "url('./src/assets/jess-bailey-unsplash.jpg')",
+      }
+    },
   },
   plugins: [],
 }

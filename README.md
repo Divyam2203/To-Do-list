@@ -18,6 +18,10 @@ This project implements a fully-functional To-Do List application using React, T
 - **TypeScript**: Superset of JavaScript for type safety (https://www.typescriptlang.org/)
 - **Tailwind CSS**: Utility-first CSS framework for rapid styling (https://tailwindcss.com/docs/installation)
 
+## Credits
+- Photo by <a href="https://unsplash.com/@jessbaileydesigns?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jess Bailey</a> on <a href="https://unsplash.com/photos/pen-near-black-lined-paper-and-eyeglasses-q10VITrVYUM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+
 ## Installation
 
 ### Clone this repository.

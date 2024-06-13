@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import List from "./components/List.tsx";
 import Header from "./components/Header.tsx";
-//import "./index.css";
+
 
 export default function App() {
   const [todos, setTodos] = useState([]);
@@ -58,7 +58,7 @@ export default function App() {
   };
 
   return (
-    <div className="m-auto mt-20 w-3/5 min-w-96 border-2 border-black">
+    <div className="m-auto mt-20 w-3/5 min-w-96 backdrop-blur-lg backdrop-brightness-95 border rounded-lg">
       <Header
         todos={todos}
         setTodos={setTodos}

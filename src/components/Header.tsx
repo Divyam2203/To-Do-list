@@ -39,15 +39,15 @@ export default function Header({
   return (
     <>
       <div className="mb-10 flex flex-col">
-        <div className="mb-10 bg-blue-500 p-8 text-center text-2xl">to-do</div>
+        <div className="mb-10 bg-white p-8 text-center text-2xl rounded-t-lg">Things To-Do</div>
         <div className="mx-1 flex h-12 flex-row">
           <form
             className="mx-2 flex w-8/12 justify-end"
             onSubmit={handleItemAdd}
           >
-            <div className="my-1 h-full w-full">
+            <div className="my-1 h-full w-full rounded-l-sm">
               <input
-                className="h-full w-full p-4"
+                className="h-full w-full p-4 rounded-l-sm"
                 type="text"
                 placeholder="Add a Todo "
                 required
@@ -58,7 +58,7 @@ export default function Header({
             <div className="">
               <button
                 type="submit"
-                className="my-1 h-full w-12 cursor-pointer bg-green-500"
+                className="my-1 h-full w-12 cursor-pointer bg-green-500 rounded-r-sm"
               ></button>
             </div>
           </form>
@@ -66,7 +66,7 @@ export default function Header({
             <select
               name="sortType"
               id="sort-type"
-              className="my-1 mr-2 h-full w-full bg-white p-4"
+              className="my-1 mr-2 h-full w-full bg-white p-4 rounded-sm"
               onChange={handleFilterChange}
             >
               <option value="all">All</option>
