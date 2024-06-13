@@ -20,7 +20,7 @@ This project implements a fully-functional To-Do List application using React, T
 
 ## Credits
 - Photo by <a href="https://unsplash.com/@jessbaileydesigns?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jess Bailey</a> on <a href="https://unsplash.com/photos/pen-near-black-lined-paper-and-eyeglasses-q10VITrVYUM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-  
+- Icons from <a href="https://www.svgrepo.com/">SVG Repo</a>
 
 ## Installation
 
