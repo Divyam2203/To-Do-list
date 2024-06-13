@@ -40,7 +40,7 @@ export default function Header({
 
   return (
     <>
-      <div className="mb-10 flex flex-col">
+      <div className="mb-10 flex flex-col text-slate-900">
         <div className="mb-10 bg-gradient-to-bl from-cream to-macbook p-8 text-center text-2xl rounded-t-lg">Things To-Do</div>
         <div className="mx-1 flex h-12 flex-row">
           <form
@@ -60,7 +60,7 @@ export default function Header({
             <div className="  ">
               <button
                 type="submit"
-                className="my-1 h-full w-12 cursor-pointer rounded-r-sm border-2 border-l-0 border-gray-200 backdrop-blur-lg backdrop-brightness-90"
+                className="my-1 h-full w-12 cursor-pointer rounded-r-sm border-2 border-l-0 border-gray-200 backdrop-blur-lg "
               ><img src={add} /></button>
             </div>
           </form>
@@ -68,7 +68,7 @@ export default function Header({
             <select
               name="sortType"
               id="sort-type"
-              className="my-1 mr-2 h-full w-full bg-white p-4 rounded-sm border-2 border-gray-200"
+              className="my-1 mr-2 h-full w-full bg-white p-2 rounded-sm border-2 border-gray-200"
               onChange={handleFilterChange}
             >
               <option value="all">All</option>

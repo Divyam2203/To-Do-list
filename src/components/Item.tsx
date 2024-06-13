@@ -36,7 +36,7 @@ export default function Item({ text, todo, todos, setTodos }: itemProps) {
   let itemContent = <></>;
   let completeButton = <></>;
   const itemContentComplete = (
-    <div className="align-center m-1 flex h-full w-full rounded-sm border-2 border-gray-200 p-3 text-slate-200 backdrop-blur-lg backdrop-brightness-90">
+    <div className="align-center m-1 flex h-full w-full rounded-sm border-2 border-gray-200 p-3 text-slate-900 backdrop-blur-lg ">
       <div className="m-1 h-full w-4">
         <img src={check} alt="task-completed" className="size-full" />
       </div>
@@ -44,13 +44,13 @@ export default function Item({ text, todo, todos, setTodos }: itemProps) {
     </div>
   );
   const itemContentIncomplete = (
-    <div className="align-center m-1 h-full w-full rounded-sm border-2 border-gray-200 p-3 text-white backdrop-blur-lg backdrop-brightness-90">
+    <div className="align-center m-1 h-full w-full rounded-sm border-2 border-gray-200 p-3 text-slate-900 bg-brightness-75 backdrop-blur-lg">
       {text}
     </div>
   );
   let doneButton = (
     <button
-      className="m-1 h-full w-12 rounded-sm border-2 border-gray-200 backdrop-blur-lg backdrop-brightness-90"
+      className="m-1 h-full w-12 rounded-sm border-2 border-gray-200 backdrop-blur-lg "
       onClick={completeHandler}
     >
       <img src={done} alt="task complete" />
@@ -58,7 +58,7 @@ export default function Item({ text, todo, todos, setTodos }: itemProps) {
   );
   let redoButton = (
     <button
-      className="m-1 h-full w-12 rounded-sm border-2 border-gray-200 backdrop-blur-lg backdrop-brightness-90"
+      className="m-1 h-full w-12 rounded-sm border-2 border-gray-200 backdrop-blur-lg "
       onClick={completeHandler}
     >
       <img src={redoo} alt="redo" />
@@ -81,7 +81,7 @@ export default function Item({ text, todo, todos, setTodos }: itemProps) {
       <div>{completeButton}</div>
       <div>
         <button
-          className="m-1 h-full w-12 rounded-sm border-2 border-gray-200 backdrop-blur-lg backdrop-brightness-90"
+          className="m-1 h-full w-12 rounded-sm border-2 border-gray-200 backdrop-blur-lg "
           onClick={deleteHandler}
         >
           <img src={trash} alt="delete" />
