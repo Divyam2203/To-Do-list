@@ -1,6 +1,6 @@
 # To-Do List with React, TypeScript and Tailwind
 
-<img src="./public/Screen Shot 2024-06-24 at 16.56.08.png">
+<img src="./public/Screenshot 2024-06-24 165448.png">
 
 ## Description
 
