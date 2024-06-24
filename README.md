@@ -1,5 +1,7 @@
 # To-Do List with React, TypeScript and Tailwind
 
+<img src="./public/Screen Shot 2024-06-24 at 16.56.08.png">
+
 ## Description
 
 This project implements a fully-functional To-Do List application using React, TypeScript for type safety, and Tailwind CSS for rapid styling. It provides the following features:
